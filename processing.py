@@ -19,12 +19,13 @@ def plot_lines(lines, path):
     plt.axis('off')
     plt.imshow(lines)
     plt.savefig(path, dpi = 1000, bbox_inches='tight', pad_inches = 0)
+    plt.close()
     
 # creating donut diagram
 def plot_donut(pielines, path, background_style='default'):
     values = np.ones(len(pielines))
     colorset = [tuple(c) for c in pielines]
-    if background_style=='default':
+    if background_style=='white':
         circle_color = 'white'
         facecolor='white'
     elif background_style=='dark':
@@ -42,13 +43,16 @@ def plot_donut(pielines, path, background_style='default'):
     plt.xlim([-1.0, 1.0])
     plt.ylim([-1.0, 1.0])
     plt.savefig(path, dpi = 1500, bbox_inches='tight', pad_inches = 0)
+    plt.close()
     
 # creating interpolated donut diagram
 def plot_interpolated_donut(interpolated_image_path, output_path, background_style='default'):
     Ro = 2400.0
     Ri = 800.0
     
-    if background_style == 'beige':
+    if background_style == 'white':
+        bg_color = (255,255,255)
+    elif background_style == 'beige':
         bg_color = (227,220,213)
     
     circle = [[bg_color for x in range(int(Ro * 2))] for y in range(int(Ro * 2))]
@@ -85,8 +89,6 @@ def plot_interpolated_donut(interpolated_image_path, output_path, background_sty
     new_image.putdata(list_image)
     new_image = new_image.rotate(90)
     new_image.save(output_path, 'PNG')
-
-    
     
 # creating wave diagram
 def plot_waves(wavelines, path, background_style='default'):
@@ -106,6 +108,7 @@ def plot_waves(wavelines, path, background_style='default'):
     plt.axis('off')
     plt.barh(values, brightness, align='center', height = 1, color=colorset)
     plt.savefig(path, facecolor=fig.get_facecolor(), dpi = 500, bbox_inches='tight', pad_inches = 0)
+    plt.close()
                                                         
 # calculating mean color   
 def mean_color(image):
