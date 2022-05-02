@@ -9,7 +9,7 @@
 
 **Movie Lines** is a media art project representing  movie timeline in its unique colours on a high-quality poster.
 
-Each image represents an unique fingerprint of the movie generated with the power of big data and computer science. 
+Each image represents an unique fingerprint of the movie generated with the power of Open CV. 
 
 It consists of almost 2000 lines where each line stands for a few frames extracted from a movie at regular intervals and aggregated by mean color. 
 
