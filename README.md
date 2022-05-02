@@ -43,7 +43,7 @@ So, one HD image is a matrix of 1080 by 1920 or 2 073 600 color cells.
 
    <img src="https://github.com/g2r4i6e8/movie-lines/blob/main/docs/donut.png?raw=true" width="300" />
    
-6. At the final stage, the attributes of the film are added: title, slogan, year, director, duration and rating (IMDB or Kinopoisk).
+6. At the final stage, the attributes of the film are added: title, slogan, year, director, duration and rating (IMDB or Kinopoisk). Poster design is automated via the Pillow library.
 
    <img src="https://github.com/g2r4i6e8/movie-lines/blob/main/docs/Amelie_341_interpolatedDonut_rendered_interdonut_a3.jpg?raw=true" width="300" />
 
